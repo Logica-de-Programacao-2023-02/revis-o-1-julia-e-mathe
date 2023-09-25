@@ -12,6 +12,21 @@ package q2
 //
 //Ajude os amigos a encontrar o número de problemas para os quais eles escreverão uma solução.
 
-func ProblemsSolved(answers [][3]bool) int {
-	return 0
+func ProblemsSolved(respostas [][3]bool) int {
+
+	contagem := 0
+	for m := 0; m < len(respostas); m++ {
+		NT := 0
+
+		for i := 0; i < len(respostas[m]); i++ {
+			if respostas[m][i] {
+				NT++
+			}
+		}
+		if NT >= 2 {
+			contagem++
+		}
+
+	}
+	return contagem
 }
